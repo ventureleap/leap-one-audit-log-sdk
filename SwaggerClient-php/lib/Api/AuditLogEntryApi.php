@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace VentureLeap\AuditLogService\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use VentureLeap\AuditLogService\ApiException;
+use VentureLeap\AuditLogService\Configuration;
+use VentureLeap\AuditLogService\HeaderSelector;
+use VentureLeap\AuditLogService\ObjectSerializer;
 
 /**
  * AuditLogEntryApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class AuditLogEntryApi
      * @param  string $application_id application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \VentureLeap\AuditLogService\Model\InlineResponse200
      */
     public function getAuditLogEntryCollection($application_id = null, $page = '1')
     {
@@ -112,13 +112,13 @@ class AuditLogEntryApi
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditLogEntryCollectionWithHttpInfo($application_id = null, $page = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse200';
         $request = $this->getAuditLogEntryCollectionRequest($application_id, $page);
 
         try {
@@ -170,7 +170,7 @@ class AuditLogEntryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\VentureLeap\AuditLogService\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class AuditLogEntryApi
      */
     public function getAuditLogEntryCollectionAsyncWithHttpInfo($application_id = null, $page = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse200';
         $request = $this->getAuditLogEntryCollectionRequest($application_id, $page);
 
         return $this->client
@@ -359,9 +359,9 @@ class AuditLogEntryApi
      *
      * @param  string $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead
+     * @return \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead
      */
     public function getAuditLogEntryItem($id)
     {
@@ -376,13 +376,13 @@ class AuditLogEntryApi
      *
      * @param  string $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditLogEntryItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead';
+        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
         $request = $this->getAuditLogEntryItemRequest($id);
 
         try {
@@ -434,7 +434,7 @@ class AuditLogEntryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead',
+                        '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class AuditLogEntryApi
      */
     public function getAuditLogEntryItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead';
+        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
         $request = $this->getAuditLogEntryItemRequest($id);
 
         return $this->client
@@ -624,11 +624,11 @@ class AuditLogEntryApi
      *
      * Creates a AuditLogEntry resource.
      *
-     * @param  \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead
+     * @return \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead
      */
     public function postAuditLogEntryCollection($body = null)
     {
@@ -641,15 +641,15 @@ class AuditLogEntryApi
      *
      * Creates a AuditLogEntry resource.
      *
-     * @param  \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postAuditLogEntryCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead';
+        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
         $request = $this->postAuditLogEntryCollectionRequest($body);
 
         try {
@@ -701,7 +701,7 @@ class AuditLogEntryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead',
+                        '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -716,7 +716,7 @@ class AuditLogEntryApi
      *
      * Creates a AuditLogEntry resource.
      *
-     * @param  \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -736,14 +736,14 @@ class AuditLogEntryApi
      *
      * Creates a AuditLogEntry resource.
      *
-     * @param  \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postAuditLogEntryCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead';
+        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
         $request = $this->postAuditLogEntryCollectionRequest($body);
 
         return $this->client
@@ -786,7 +786,7 @@ class AuditLogEntryApi
     /**
      * Create request for operation 'postAuditLogEntryCollection'
      *
-     * @param  \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

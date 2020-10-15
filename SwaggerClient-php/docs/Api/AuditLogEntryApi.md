@@ -1,4 +1,4 @@
-# Swagger\Client\AuditLogEntryApi
+# VentureLeap\AuditLogService\AuditLogEntryApi
 
 All URIs are relative to */*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postAuditLogEntryCollection**](AuditLogEntryApi.md#postauditlogentrycollection) | **POST** /audit_log_entries | Creates a AuditLogEntry resource.
 
 # **getAuditLogEntryCollection**
-> \Swagger\Client\Model\InlineResponse200 getAuditLogEntryCollection($application_id, $page)
+> \VentureLeap\AuditLogService\Model\InlineResponse200 getAuditLogEntryCollection($application_id, $page)
 
 Retrieves the collection of AuditLogEntry resources.
 
@@ -18,11 +18,11 @@ Retrieves the collection of AuditLogEntry resources.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\AuditLogEntryApi(
+$apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\VentureLeap\AuditLogService\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAuditLogEntryItem**
-> \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead getAuditLogEntryItem($id)
+> \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead getAuditLogEntryItem($id)
 
 Retrieves a AuditLogEntry resource.
 
@@ -72,11 +72,11 @@ Retrieves a AuditLogEntry resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\AuditLogEntryApi(
+$apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead**](../Model/AuditLogEntryJsonldAuditLogRead.md)
+[**\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead**](../Model/AuditLogEntryJsonldAuditLogRead.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postAuditLogEntryCollection**
-> \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead postAuditLogEntryCollection($body)
+> \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead postAuditLogEntryCollection($body)
 
 Creates a AuditLogEntry resource.
 
@@ -124,17 +124,17 @@ Creates a AuditLogEntry resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\AuditLogEntryApi(
+$apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite(); // \Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite | The new AuditLogEntry resource
+$body = new \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite(); // \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite | The new AuditLogEntry resource
 
 try {
     $result = $apiInstance->postAuditLogEntryCollection($body);
@@ -149,11 +149,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AuditLogEntryJsonldAuditLogWrite**](../Model/AuditLogEntryJsonldAuditLogWrite.md)| The new AuditLogEntry resource | [optional]
+ **body** | [**\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite**](../Model/AuditLogEntryJsonldAuditLogWrite.md)| The new AuditLogEntry resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead**](../Model/AuditLogEntryJsonldAuditLogRead.md)
+[**\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead**](../Model/AuditLogEntryJsonldAuditLogRead.md)
 
 ### Authorization
 

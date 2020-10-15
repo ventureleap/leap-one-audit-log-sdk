@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace VentureLeap\AuditLogService\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \VentureLeap\AuditLogService\ObjectSerializer;
 
 /**
  * InlineResponse200Hydrasearch Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse200Hydrasearch implements ModelInterface, ArrayAccess
         'type' => 'string',
 'hydratemplate' => 'string',
 'hydravariable_representation' => 'string',
-'hydramapping' => '\Swagger\Client\Model\InlineResponse200HydrasearchHydramapping[]'    ];
+'hydramapping' => '\VentureLeap\AuditLogService\Model\InlineResponse200HydrasearchHydramapping[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class InlineResponse200Hydrasearch implements ModelInterface, ArrayAccess
     /**
      * Gets hydramapping
      *
-     * @return \Swagger\Client\Model\InlineResponse200HydrasearchHydramapping[]
+     * @return \VentureLeap\AuditLogService\Model\InlineResponse200HydrasearchHydramapping[]
      */
     public function getHydramapping()
     {
@@ -299,7 +299,7 @@ class InlineResponse200Hydrasearch implements ModelInterface, ArrayAccess
     /**
      * Sets hydramapping
      *
-     * @param \Swagger\Client\Model\InlineResponse200HydrasearchHydramapping[] $hydramapping hydramapping
+     * @param \VentureLeap\AuditLogService\Model\InlineResponse200HydrasearchHydramapping[] $hydramapping hydramapping
      *
      * @return $this
      */

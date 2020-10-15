@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace VentureLeap\AuditLogService\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \VentureLeap\AuditLogService\ObjectSerializer;
 
 /**
  * InlineResponse200 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,10 +56,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'hydramember' => '\Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead[]',
+        'hydramember' => '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead[]',
 'hydratotal_items' => 'int',
-'hydraview' => '\Swagger\Client\Model\InlineResponse200Hydraview',
-'hydrasearch' => '\Swagger\Client\Model\InlineResponse200Hydrasearch'    ];
+'hydraview' => '\VentureLeap\AuditLogService\Model\InlineResponse200Hydraview',
+'hydrasearch' => '\VentureLeap\AuditLogService\Model\InlineResponse200Hydrasearch'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -220,7 +220,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets hydramember
      *
-     * @return \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead[]
+     * @return \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead[]
      */
     public function getHydramember()
     {
@@ -230,7 +230,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets hydramember
      *
-     * @param \Swagger\Client\Model\AuditLogEntryJsonldAuditLogRead[] $hydramember hydramember
+     * @param \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead[] $hydramember hydramember
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets hydraview
      *
-     * @return \Swagger\Client\Model\InlineResponse200Hydraview
+     * @return \VentureLeap\AuditLogService\Model\InlineResponse200Hydraview
      */
     public function getHydraview()
     {
@@ -278,7 +278,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets hydraview
      *
-     * @param \Swagger\Client\Model\InlineResponse200Hydraview $hydraview hydraview
+     * @param \VentureLeap\AuditLogService\Model\InlineResponse200Hydraview $hydraview hydraview
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets hydrasearch
      *
-     * @return \Swagger\Client\Model\InlineResponse200Hydrasearch
+     * @return \VentureLeap\AuditLogService\Model\InlineResponse200Hydrasearch
      */
     public function getHydrasearch()
     {
@@ -302,7 +302,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets hydrasearch
      *
-     * @param \Swagger\Client\Model\InlineResponse200Hydrasearch $hydrasearch hydrasearch
+     * @param \VentureLeap\AuditLogService\Model\InlineResponse200Hydrasearch $hydrasearch hydrasearch
      *
      * @return $this
      */
