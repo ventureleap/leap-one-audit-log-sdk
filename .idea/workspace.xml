@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e793bb6-caaf-4bb8-bd60-6378c9e89b95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.swagger-codegen-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.swagger-codegen/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/.php_cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Api/AuditLogEntryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/AuditLogEntryJsonldAuditLogRead.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/AuditLogEntryJsonldAuditLogWrite.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/InlineResponse200.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Api/AuditLogEntryApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/ApiException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Configuration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/HeaderSelector.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/AuditLogEntryJsonldAuditLogRead.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/AuditLogEntryJsonldAuditLogWrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/InlineResponse200.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/InlineResponse200Hydrasearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/InlineResponse200Hydraview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/Model/ModelInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/lib/ObjectSerializer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Api/AuditLogEntryApiTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/AuditLogEntryJsonldAuditLogReadTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/AuditLogEntryJsonldAuditLogWriteTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200HydrasearchHydramappingTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/AuditLogEntryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogRead.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogWrite.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/git_push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Api/AuditLogEntryApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ApiException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Configuration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/HeaderSelector.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/AuditLogEntryJsonldAuditLogRead.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/AuditLogEntryJsonldAuditLogWrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydrasearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydraview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/ModelInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ObjectSerializer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Api/AuditLogEntryApiTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogReadTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogWriteTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchHydramappingTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200Test.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/SwaggerClient-php/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iv3pz02NA6Twy0TOwu68tYIS6x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e793bb6-caaf-4bb8-bd60-6378c9e89b95" name="Default Changelist" comment="" />
+      <created>1602774424680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602774424680</updated>
+      <workItem from="1602774426457" duration="4354000" />
+      <workItem from="1602840882321" duration="309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="341" y="486" width="598" height="490" key="find.popup" timestamp="1602780254614">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="341" y="486" width="598" height="490" key="find.popup/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602780254614" />
+    <state x="305" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1602780263916">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="305" y="348" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602780263916" />
+  </component>
+</project>

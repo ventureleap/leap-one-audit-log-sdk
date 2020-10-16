@@ -59,8 +59,7 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
-'body' => 'string[]',
-'type' => 'string'    ];
+'body' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,8 +70,7 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         'context' => null,
 'id' => null,
 'type' => null,
-'body' => null,
-'type' => null    ];
+'body' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -104,8 +102,7 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         'context' => '@context',
 'id' => '@id',
 'type' => '@type',
-'body' => 'body',
-'type' => 'type'    ];
+'body' => 'body'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,8 +113,7 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         'context' => 'setContext',
 'id' => 'setId',
 'type' => 'setType',
-'body' => 'setBody',
-'type' => 'setType'    ];
+'body' => 'setBody'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -128,8 +124,7 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         'context' => 'getContext',
 'id' => 'getId',
 'type' => 'getType',
-'body' => 'getBody',
-'type' => 'getType'    ];
+'body' => 'getBody'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -193,7 +188,6 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -312,30 +306,6 @@ class AuditLogEntryJsonldAuditLogWrite implements ModelInterface, ArrayAccess
     public function setBody($body)
     {
         $this->container['body'] = $body;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
 
         return $this;
     }

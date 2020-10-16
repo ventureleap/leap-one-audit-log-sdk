@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace VentureLeap\AuditLogService;
 
 /**
  * AuditLogEntryJsonldAuditLogWriteTest Class Doc Comment
  *
  * @category    Class
  * @description AuditLogEntryJsonldAuditLogWrite
- * @package     Swagger\Client
+ * @package     VentureLeap\AuditLogService
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -100,13 +100,6 @@ class AuditLogEntryJsonldAuditLogWriteTest extends \PHPUnit_Framework_TestCase
      * Test attribute "body"
      */
     public function testPropertyBody()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
     {
     }
 }

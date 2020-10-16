@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,17 +25,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace VentureLeap\AuditLogService;
 
-use Swagger\Client\Configuration;
-use Swagger\Client\ApiException;
-use Swagger\Client\ObjectSerializer;
+use VentureLeap\AuditLogService\Configuration;
+use VentureLeap\AuditLogService\ApiException;
+use VentureLeap\AuditLogService\ObjectSerializer;
 
 /**
  * AuditLogEntryApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
