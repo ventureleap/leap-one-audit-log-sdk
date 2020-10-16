@@ -102,11 +102,4 @@ class AuditLogEntryJsonldAuditLogWriteTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBody()
     {
     }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
 }
