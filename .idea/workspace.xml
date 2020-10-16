@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e793bb6-caaf-4bb8-bd60-6378c9e89b95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.swagger-codegen-ignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.swagger-codegen/VERSION" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/.php_cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/.travis.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/README.md" beforeDir="false" />
@@ -37,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwaggerClient-php/test/Model/InlineResponse200Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Api/AuditLogEntryApi.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogRead.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogWrite.md" beforeDir="false" />
@@ -45,7 +41,6 @@
       <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/git_push.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Api/AuditLogEntryApi.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ApiException.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Configuration.php" beforeDir="false" />
@@ -58,13 +53,6 @@
       <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydraview.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Model/ModelInterface.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ObjectSerializer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Api/AuditLogEntryApiTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogWriteTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchHydramappingTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200Test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602774424680</updated>
       <workItem from="1602774426457" duration="4354000" />
-      <workItem from="1602840882321" duration="309000" />
+      <workItem from="1602840882321" duration="653000" />
     </task>
     <servers />
   </component>
@@ -118,6 +106,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="360" y="540" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602841211126">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="360" y="540" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602841211126" />
     <state x="341" y="486" width="598" height="490" key="find.popup" timestamp="1602780254614">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
