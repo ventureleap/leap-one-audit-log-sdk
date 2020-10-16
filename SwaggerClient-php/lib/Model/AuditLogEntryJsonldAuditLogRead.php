@@ -62,7 +62,8 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
 'uuid' => 'string',
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime',
-'body' => 'string[]'    ];
+'body' => 'string[]',
+'entry_type' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -76,7 +77,8 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
 'uuid' => null,
 'created_at' => 'date-time',
 'updated_at' => 'date-time',
-'body' => null    ];
+'body' => null,
+'entry_type' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -111,7 +113,8 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
 'uuid' => 'uuid',
 'created_at' => 'createdAt',
 'updated_at' => 'updatedAt',
-'body' => 'body'    ];
+'body' => 'body',
+'entry_type' => 'entryType'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -125,7 +128,8 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
 'uuid' => 'setUuid',
 'created_at' => 'setCreatedAt',
 'updated_at' => 'setUpdatedAt',
-'body' => 'setBody'    ];
+'body' => 'setBody',
+'entry_type' => 'setEntryType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -139,7 +143,8 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
 'uuid' => 'getUuid',
 'created_at' => 'getCreatedAt',
 'updated_at' => 'getUpdatedAt',
-'body' => 'getBody'    ];
+'body' => 'getBody',
+'entry_type' => 'getEntryType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -206,6 +211,7 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['entry_type'] = isset($data['entry_type']) ? $data['entry_type'] : null;
     }
 
     /**
@@ -396,6 +402,30 @@ class AuditLogEntryJsonldAuditLogRead implements ModelInterface, ArrayAccess
     public function setBody($body)
     {
         $this->container['body'] = $body;
+
+        return $this;
+    }
+
+    /**
+     * Gets entry_type
+     *
+     * @return string
+     */
+    public function getEntryType()
+    {
+        return $this->container['entry_type'];
+    }
+
+    /**
+     * Sets entry_type
+     *
+     * @param string $entry_type entry_type
+     *
+     * @return $this
+     */
+    public function setEntryType($entry_type)
+    {
+        $this->container['entry_type'] = $entry_type;
 
         return $this;
     }
