@@ -4,9 +4,9 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuditLogEntryCollection**](AuditLogEntryApi.md#getauditlogentrycollection) | **GET** /audit_log_entries | Retrieves the collection of AuditLogEntry resources.
-[**getAuditLogEntryItem**](AuditLogEntryApi.md#getauditlogentryitem) | **GET** /audit_log_entries/{id} | Retrieves a AuditLogEntry resource.
-[**postAuditLogEntryCollection**](AuditLogEntryApi.md#postauditlogentrycollection) | **POST** /audit_log_entries | Creates a AuditLogEntry resource.
+[**getAuditLogEntryCollection**](AuditLogEntryApi.md#getauditlogentrycollection) | **GET** /audit-log/audit_log_entries | Retrieves the collection of AuditLogEntry resources.
+[**getAuditLogEntryItem**](AuditLogEntryApi.md#getauditlogentryitem) | **GET** /audit-log/audit_log_entries/{id} | Retrieves a AuditLogEntry resource.
+[**postAuditLogEntryCollection**](AuditLogEntryApi.md#postauditlogentrycollection) | **POST** /audit-log/audit_log_entries | Creates a AuditLogEntry resource.
 
 # **getAuditLogEntryCollection**
 > \VentureLeap\AuditLogService\Model\InlineResponse200 getAuditLogEntryCollection($application_id, $page)
@@ -17,14 +17,10 @@ Retrieves the collection of AuditLogEntry resources.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -57,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId), [basicAuth](../../README.md#basicAuth)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -75,14 +71,10 @@ Retrieves a AuditLogEntry resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -113,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId), [basicAuth](../../README.md#basicAuth)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -131,14 +123,10 @@ Creates a AuditLogEntry resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -169,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId), [basicAuth](../../README.md#basicAuth)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 

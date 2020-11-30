@@ -1,9 +1,9 @@
-# InlineResponse200
+# InlineResponse2001
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hydramember** | [**\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead[]**](AuditLogEntryJsonldAuditLogRead.md) |  | 
+**hydramember** | [**\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead[]**](ConfigurationEntryJsonldConfigurationRead.md) |  | 
 **hydratotal_items** | **int** |  | [optional] 
 **hydraview** | [**\VentureLeap\AuditLogService\Model\InlineResponse200Hydraview**](InlineResponse200Hydraview.md) |  | [optional] 
 **hydrasearch** | [**\VentureLeap\AuditLogService\Model\InlineResponse200Hydrasearch**](InlineResponse200Hydrasearch.md) |  | [optional] 

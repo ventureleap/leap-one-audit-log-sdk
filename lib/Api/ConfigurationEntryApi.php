@@ -1,6 +1,6 @@
 <?php
 /**
- * AuditLogEntryApi
+ * ConfigurationEntryApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use VentureLeap\AuditLogService\HeaderSelector;
 use VentureLeap\AuditLogService\ObjectSerializer;
 
 /**
- * AuditLogEntryApi Class Doc Comment
+ * ConfigurationEntryApi Class Doc Comment
  *
  * @category Class
  * @package  VentureLeap\AuditLogService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AuditLogEntryApi
+class ConfigurationEntryApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,273 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryCollection
+     * Operation deleteConfigurationEntryItem
      *
-     * Retrieves the collection of AuditLogEntry resources.
+     * Removes the ConfigurationEntry resource.
      *
+     * @param  string $id id (required)
+     *
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function deleteConfigurationEntryItem($id)
+    {
+        $this->deleteConfigurationEntryItemWithHttpInfo($id);
+    }
+
+    /**
+     * Operation deleteConfigurationEntryItemWithHttpInfo
+     *
+     * Removes the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     *
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteConfigurationEntryItemWithHttpInfo($id)
+    {
+        $returnType = '';
+        $request = $this->deleteConfigurationEntryItemRequest($id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteConfigurationEntryItemAsync
+     *
+     * Removes the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteConfigurationEntryItemAsync($id)
+    {
+        return $this->deleteConfigurationEntryItemAsyncWithHttpInfo($id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteConfigurationEntryItemAsyncWithHttpInfo
+     *
+     * Removes the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteConfigurationEntryItemAsyncWithHttpInfo($id)
+    {
+        $returnType = '';
+        $request = $this->deleteConfigurationEntryItemRequest($id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'deleteConfigurationEntryItem'
+     *
+     * @param  string $id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function deleteConfigurationEntryItemRequest($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling deleteConfigurationEntryItem'
+            );
+        }
+
+        $resourcePath = '/audit-log/configuration_entries/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getConfigurationEntryCollection
+     *
+     * Retrieves the collection of ConfigurationEntry resources.
+     *
+     * @param  string $key key (optional)
+     * @param  string $value value (optional)
      * @param  string $application_id application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\AuditLogService\Model\InlineResponse200
+     * @return \VentureLeap\AuditLogService\Model\InlineResponse2001
      */
-    public function getAuditLogEntryCollection($application_id = null, $page = '1')
+    public function getConfigurationEntryCollection($key = null, $value = null, $application_id = null, $page = '1')
     {
-        list($response) = $this->getAuditLogEntryCollectionWithHttpInfo($application_id, $page);
+        list($response) = $this->getConfigurationEntryCollectionWithHttpInfo($key, $value, $application_id, $page);
         return $response;
     }
 
     /**
-     * Operation getAuditLogEntryCollectionWithHttpInfo
+     * Operation getConfigurationEntryCollectionWithHttpInfo
      *
-     * Retrieves the collection of AuditLogEntry resources.
+     * Retrieves the collection of ConfigurationEntry resources.
      *
+     * @param  string $key (optional)
+     * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\AuditLogService\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAuditLogEntryCollectionWithHttpInfo($application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionWithHttpInfo($key = null, $value = null, $application_id = null, $page = '1')
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse200';
-        $request = $this->getAuditLogEntryCollectionRequest($application_id, $page);
+        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse2001';
+        $request = $this->getConfigurationEntryCollectionRequest($key, $value, $application_id, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +404,7 @@ class AuditLogEntryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\AuditLogService\Model\InlineResponse200',
+                        '\VentureLeap\AuditLogService\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +415,21 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryCollectionAsync
+     * Operation getConfigurationEntryCollectionAsync
      *
-     * Retrieves the collection of AuditLogEntry resources.
+     * Retrieves the collection of ConfigurationEntry resources.
      *
+     * @param  string $key (optional)
+     * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAuditLogEntryCollectionAsync($application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionAsync($key = null, $value = null, $application_id = null, $page = '1')
     {
-        return $this->getAuditLogEntryCollectionAsyncWithHttpInfo($application_id, $page)
+        return $this->getConfigurationEntryCollectionAsyncWithHttpInfo($key, $value, $application_id, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +438,22 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryCollectionAsyncWithHttpInfo
+     * Operation getConfigurationEntryCollectionAsyncWithHttpInfo
      *
-     * Retrieves the collection of AuditLogEntry resources.
+     * Retrieves the collection of ConfigurationEntry resources.
      *
+     * @param  string $key (optional)
+     * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAuditLogEntryCollectionAsyncWithHttpInfo($application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionAsyncWithHttpInfo($key = null, $value = null, $application_id = null, $page = '1')
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse200';
-        $request = $this->getAuditLogEntryCollectionRequest($application_id, $page);
+        $returnType = '\VentureLeap\AuditLogService\Model\InlineResponse2001';
+        $request = $this->getConfigurationEntryCollectionRequest($key, $value, $application_id, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,24 +493,34 @@ class AuditLogEntryApi
     }
 
     /**
-     * Create request for operation 'getAuditLogEntryCollection'
+     * Create request for operation 'getConfigurationEntryCollection'
      *
+     * @param  string $key (optional)
+     * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAuditLogEntryCollectionRequest($application_id = null, $page = '1')
+    protected function getConfigurationEntryCollectionRequest($key = null, $value = null, $application_id = null, $page = '1')
     {
 
-        $resourcePath = '/audit-log/audit_log_entries';
+        $resourcePath = '/audit-log/configuration_entries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($key !== null) {
+            $queryParams['key'] = ObjectSerializer::toQueryValue($key, null);
+        }
+        // query params
+        if ($value !== null) {
+            $queryParams['value'] = ObjectSerializer::toQueryValue($value, null);
+        }
         // query params
         if ($application_id !== null) {
             $queryParams['applicationId'] = ObjectSerializer::toQueryValue($application_id, null);
@@ -353,37 +601,37 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryItem
+     * Operation getConfigurationEntryItem
      *
-     * Retrieves a AuditLogEntry resource.
+     * Retrieves a ConfigurationEntry resource.
      *
      * @param  string $id id (required)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead
+     * @return \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead
      */
-    public function getAuditLogEntryItem($id)
+    public function getConfigurationEntryItem($id)
     {
-        list($response) = $this->getAuditLogEntryItemWithHttpInfo($id);
+        list($response) = $this->getConfigurationEntryItemWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation getAuditLogEntryItemWithHttpInfo
+     * Operation getConfigurationEntryItemWithHttpInfo
      *
-     * Retrieves a AuditLogEntry resource.
+     * Retrieves a ConfigurationEntry resource.
      *
      * @param  string $id (required)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAuditLogEntryItemWithHttpInfo($id)
+    public function getConfigurationEntryItemWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
-        $request = $this->getAuditLogEntryItemRequest($id);
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->getConfigurationEntryItemRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -434,7 +682,7 @@ class AuditLogEntryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead',
+                        '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -445,18 +693,18 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryItemAsync
+     * Operation getConfigurationEntryItemAsync
      *
-     * Retrieves a AuditLogEntry resource.
+     * Retrieves a ConfigurationEntry resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAuditLogEntryItemAsync($id)
+    public function getConfigurationEntryItemAsync($id)
     {
-        return $this->getAuditLogEntryItemAsyncWithHttpInfo($id)
+        return $this->getConfigurationEntryItemAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -465,19 +713,19 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation getAuditLogEntryItemAsyncWithHttpInfo
+     * Operation getConfigurationEntryItemAsyncWithHttpInfo
      *
-     * Retrieves a AuditLogEntry resource.
+     * Retrieves a ConfigurationEntry resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAuditLogEntryItemAsyncWithHttpInfo($id)
+    public function getConfigurationEntryItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
-        $request = $this->getAuditLogEntryItemRequest($id);
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->getConfigurationEntryItemRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -517,23 +765,23 @@ class AuditLogEntryApi
     }
 
     /**
-     * Create request for operation 'getAuditLogEntryItem'
+     * Create request for operation 'getConfigurationEntryItem'
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAuditLogEntryItemRequest($id)
+    protected function getConfigurationEntryItemRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getAuditLogEntryItem'
+                'Missing the required parameter $id when calling getConfigurationEntryItem'
             );
         }
 
-        $resourcePath = '/audit-log/audit_log_entries/{id}';
+        $resourcePath = '/audit-log/configuration_entries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -620,37 +868,37 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation postAuditLogEntryCollection
+     * Operation postConfigurationEntryCollection
      *
-     * Creates a AuditLogEntry resource.
+     * Creates a ConfigurationEntry resource.
      *
-     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The new ConfigurationEntry resource (optional)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead
+     * @return \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead
      */
-    public function postAuditLogEntryCollection($body = null)
+    public function postConfigurationEntryCollection($body = null)
     {
-        list($response) = $this->postAuditLogEntryCollectionWithHttpInfo($body);
+        list($response) = $this->postConfigurationEntryCollectionWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation postAuditLogEntryCollectionWithHttpInfo
+     * Operation postConfigurationEntryCollectionWithHttpInfo
      *
-     * Creates a AuditLogEntry resource.
+     * Creates a ConfigurationEntry resource.
      *
-     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The new ConfigurationEntry resource (optional)
      *
      * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postAuditLogEntryCollectionWithHttpInfo($body = null)
+    public function postConfigurationEntryCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
-        $request = $this->postAuditLogEntryCollectionRequest($body);
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->postConfigurationEntryCollectionRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -701,7 +949,7 @@ class AuditLogEntryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead',
+                        '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -712,18 +960,18 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation postAuditLogEntryCollectionAsync
+     * Operation postConfigurationEntryCollectionAsync
      *
-     * Creates a AuditLogEntry resource.
+     * Creates a ConfigurationEntry resource.
      *
-     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The new ConfigurationEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postAuditLogEntryCollectionAsync($body = null)
+    public function postConfigurationEntryCollectionAsync($body = null)
     {
-        return $this->postAuditLogEntryCollectionAsyncWithHttpInfo($body)
+        return $this->postConfigurationEntryCollectionAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -732,19 +980,19 @@ class AuditLogEntryApi
     }
 
     /**
-     * Operation postAuditLogEntryCollectionAsyncWithHttpInfo
+     * Operation postConfigurationEntryCollectionAsyncWithHttpInfo
      *
-     * Creates a AuditLogEntry resource.
+     * Creates a ConfigurationEntry resource.
      *
-     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The new ConfigurationEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postAuditLogEntryCollectionAsyncWithHttpInfo($body = null)
+    public function postConfigurationEntryCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogRead';
-        $request = $this->postAuditLogEntryCollectionRequest($body);
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->postConfigurationEntryCollectionRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -784,17 +1032,17 @@ class AuditLogEntryApi
     }
 
     /**
-     * Create request for operation 'postAuditLogEntryCollection'
+     * Create request for operation 'postConfigurationEntryCollection'
      *
-     * @param  \VentureLeap\AuditLogService\Model\AuditLogEntryJsonldAuditLogWrite $body The new AuditLogEntry resource (optional)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The new ConfigurationEntry resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postAuditLogEntryCollectionRequest($body = null)
+    protected function postConfigurationEntryCollectionRequest($body = null)
     {
 
-        $resourcePath = '/audit-log/audit_log_entries';
+        $resourcePath = '/audit-log/configuration_entries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -869,6 +1117,281 @@ class AuditLogEntryApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation putConfigurationEntryItem
+     *
+     * Replaces the ConfigurationEntry resource.
+     *
+     * @param  string $id id (required)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The updated ConfigurationEntry resource (optional)
+     *
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead
+     */
+    public function putConfigurationEntryItem($id, $body = null)
+    {
+        list($response) = $this->putConfigurationEntryItemWithHttpInfo($id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation putConfigurationEntryItemWithHttpInfo
+     *
+     * Replaces the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The updated ConfigurationEntry resource (optional)
+     *
+     * @throws \VentureLeap\AuditLogService\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function putConfigurationEntryItemWithHttpInfo($id, $body = null)
+    {
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->putConfigurationEntryItemRequest($id, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation putConfigurationEntryItemAsync
+     *
+     * Replaces the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The updated ConfigurationEntry resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putConfigurationEntryItemAsync($id, $body = null)
+    {
+        return $this->putConfigurationEntryItemAsyncWithHttpInfo($id, $body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation putConfigurationEntryItemAsyncWithHttpInfo
+     *
+     * Replaces the ConfigurationEntry resource.
+     *
+     * @param  string $id (required)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The updated ConfigurationEntry resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putConfigurationEntryItemAsyncWithHttpInfo($id, $body = null)
+    {
+        $returnType = '\VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationRead';
+        $request = $this->putConfigurationEntryItemRequest($id, $body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'putConfigurationEntryItem'
+     *
+     * @param  string $id (required)
+     * @param  \VentureLeap\AuditLogService\Model\ConfigurationEntryJsonldConfigurationWrite $body The updated ConfigurationEntry resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function putConfigurationEntryItemRequest($id, $body = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling putConfigurationEntryItem'
+            );
+        }
+
+        $resourcePath = '/audit-log/configuration_entries/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/ld+json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/ld+json'],
+                ['application/ld+json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

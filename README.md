@@ -56,10 +56,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -77,10 +77,10 @@ try {
     echo 'Exception when calling AuditLogEntryApi->getAuditLogEntryCollection: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -97,10 +97,10 @@ try {
     echo 'Exception when calling AuditLogEntryApi->getAuditLogEntryItem: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\AuditLogService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\AuditLogService\Api\AuditLogEntryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -125,15 +125,23 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuditLogEntryApi* | [**getAuditLogEntryCollection**](docs/Api/AuditLogEntryApi.md#getauditlogentrycollection) | **GET** /audit_log_entries | Retrieves the collection of AuditLogEntry resources.
-*AuditLogEntryApi* | [**getAuditLogEntryItem**](docs/Api/AuditLogEntryApi.md#getauditlogentryitem) | **GET** /audit_log_entries/{id} | Retrieves a AuditLogEntry resource.
-*AuditLogEntryApi* | [**postAuditLogEntryCollection**](docs/Api/AuditLogEntryApi.md#postauditlogentrycollection) | **POST** /audit_log_entries | Creates a AuditLogEntry resource.
+*AuditLogEntryApi* | [**getAuditLogEntryCollection**](docs/Api/AuditLogEntryApi.md#getauditlogentrycollection) | **GET** /audit-log/audit_log_entries | Retrieves the collection of AuditLogEntry resources.
+*AuditLogEntryApi* | [**getAuditLogEntryItem**](docs/Api/AuditLogEntryApi.md#getauditlogentryitem) | **GET** /audit-log/audit_log_entries/{id} | Retrieves a AuditLogEntry resource.
+*AuditLogEntryApi* | [**postAuditLogEntryCollection**](docs/Api/AuditLogEntryApi.md#postauditlogentrycollection) | **POST** /audit-log/audit_log_entries | Creates a AuditLogEntry resource.
+*ConfigurationEntryApi* | [**deleteConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /audit-log/configuration_entries/{id} | Removes the ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**getConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#getconfigurationentrycollection) | **GET** /audit-log/configuration_entries | Retrieves the collection of ConfigurationEntry resources.
+*ConfigurationEntryApi* | [**getConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /audit-log/configuration_entries/{id} | Retrieves a ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**postConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /audit-log/configuration_entries | Creates a ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**putConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /audit-log/configuration_entries/{id} | Replaces the ConfigurationEntry resource.
 
 ## Documentation For Models
 
  - [AuditLogEntryJsonldAuditLogRead](docs/Model/AuditLogEntryJsonldAuditLogRead.md)
  - [AuditLogEntryJsonldAuditLogWrite](docs/Model/AuditLogEntryJsonldAuditLogWrite.md)
+ - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
+ - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
+ - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse200Hydrasearch](docs/Model/InlineResponse200Hydrasearch.md)
  - [InlineResponse200HydrasearchHydramapping](docs/Model/InlineResponse200HydrasearchHydramapping.md)
  - [InlineResponse200Hydraview](docs/Model/InlineResponse200Hydraview.md)
@@ -141,10 +149,10 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## applicationId
+## apiKey
 
 - **Type**: API key
-- **API key parameter name**: ApplicationId
+- **API key parameter name**: Authorization
 - **Location**: HTTP header
 
 
