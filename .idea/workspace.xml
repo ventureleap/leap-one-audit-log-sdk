@@ -3,6 +3,45 @@
   <component name="ChangeListManager">
     <list default="true" id="1e793bb6-caaf-4bb8-bd60-6378c9e89b95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/AuditLogEntryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ConfigurationEntryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogRead.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/AuditLogEntryJsonldAuditLogWrite.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ConfigurationEntryJsonldConfigurationRead.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ConfigurationEntryJsonldConfigurationWrite.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Api/AuditLogEntryApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Api/ConfigurationEntryApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ApiException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Configuration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/HeaderSelector.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/AuditLogEntryJsonldAuditLogRead.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/AuditLogEntryJsonldAuditLogWrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/ConfigurationEntryJsonldConfigurationRead.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/ConfigurationEntryJsonldConfigurationWrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse2001.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydrasearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydraview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/ModelInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ObjectSerializer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Api/AuditLogEntryApiTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Api/ConfigurationEntryApiTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogReadTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/AuditLogEntryJsonldAuditLogWriteTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/ConfigurationEntryJsonldConfigurationReadTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/ConfigurationEntryJsonldConfigurationWriteTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse2001Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchHydramappingTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200Test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +77,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.swagger-codegen" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,24 +91,11 @@
       <workItem from="1602774426457" duration="4354000" />
       <workItem from="1602840882321" duration="2686000" />
       <workItem from="1606750171405" duration="1950000" />
+      <workItem from="1607089112960" duration="1154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="360" y="540" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602841211126">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="360" y="540" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602841211126" />
-    <state x="341" y="486" width="598" height="490" key="find.popup" timestamp="1602780254614">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="341" y="486" width="598" height="490" key="find.popup/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602780254614" />
-    <state x="305" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1602780263916">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="305" y="348" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417/-2560.23.2560.1417@0.23.2560.1417" timestamp="1602780263916" />
   </component>
 </project>
