@@ -138,12 +138,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AuditLogEntryAuditLogRead](docs/Model/AuditLogEntryAuditLogRead.md)
- - [AuditLogEntryAuditLogWrite](docs/Model/AuditLogEntryAuditLogWrite.md)
  - [AuditLogEntryJsonldAuditLogRead](docs/Model/AuditLogEntryJsonldAuditLogRead.md)
  - [AuditLogEntryJsonldAuditLogWrite](docs/Model/AuditLogEntryJsonldAuditLogWrite.md)
- - [ConfigurationEntryConfigurationRead](docs/Model/ConfigurationEntryConfigurationRead.md)
- - [ConfigurationEntryConfigurationWrite](docs/Model/ConfigurationEntryConfigurationWrite.md)
  - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
