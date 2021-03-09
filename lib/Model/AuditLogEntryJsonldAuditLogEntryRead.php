@@ -64,7 +64,7 @@ class AuditLogEntryJsonldAuditLogEntryRead implements ModelInterface, ArrayAcces
 'entity_uuid' => 'string',
 'entity_type' => 'string',
 'url' => 'string',
-'body' => 'string[]',
+'body' => 'object',
 'entry_type' => 'string',
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime'    ];
@@ -460,7 +460,7 @@ class AuditLogEntryJsonldAuditLogEntryRead implements ModelInterface, ArrayAcces
     /**
      * Gets body
      *
-     * @return string[]
+     * @return object
      */
     public function getBody()
     {
@@ -470,7 +470,7 @@ class AuditLogEntryJsonldAuditLogEntryRead implements ModelInterface, ArrayAcces
     /**
      * Sets body
      *
-     * @param string[] $body body
+     * @param object $body body
      *
      * @return $this
      */

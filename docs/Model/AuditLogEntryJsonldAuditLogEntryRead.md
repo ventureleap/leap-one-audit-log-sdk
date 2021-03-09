@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entity_uuid** | **string** |  | [optional] 
 **entity_type** | **string** |  | [optional] 
 **url** | **string** |  | [optional] 
-**body** | **string[]** |  | [optional] 
+**body** | **object** |  | [optional] 
 **entry_type** | **string** |  | 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **entity_uuid** | **string** |  | [optional] 
 **entity_type** | **string** |  | [optional] 
 **url** | **string** |  | [optional] 
-**body** | **string[]** |  | [optional] 
+**body** | **object** |  | [optional] 
 **entry_type** | **string** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
